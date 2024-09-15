@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework:spring-core:6.1.10'
+    implementation group: 'org.springframework', name: 'spring-context', version: '6.1.10'
+    implementation 'org.springframework:spring-jdbc:6.1.10'
+    implementation 'mysql:mysql-connector-java:8.0.28'
+
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
